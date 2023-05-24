@@ -22,7 +22,7 @@ This will give us 10 different routes between Bergen St and Wall St like so:
 ![query example](query_example.png)
 Notice how in the query, we make sure to exclude the "OPERATES" relation type. We do this because it links a route to an agency, which is not a mode of transportation one can take.
 Edit the database settings, increase the following by a reasonable amount:<br>
-server.memory.heap.initial_size
+server.memory.heap.initial_size<br>
 server.memory.heap.max_size
 
 ## How to run
