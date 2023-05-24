@@ -8,7 +8,17 @@ such as Dijkstra's shortest path algorithm or A*. Additionally, it allows us to 
 
 ![meta graph](meta_graph.png)
 
-This meta graph shows the different relations between the nodes.
+This meta graph shows the different relations between the nodes. With these relationships in place, we can query for a route like so:<br>
+```cypher
+MATCH (a:Stop), (b:Stop)
+WHERE a.name = "Bergen St" AND b.name = "Wall St"
+WITH a,b
+MATCH p = allshortestpaths((a)-[*]-(b))  
+WHERE NONE (x IN RELATIONSHIPS(p) WHERE type(x)="OPERATES")  
+RETURN p  
+LIMIT 10  
+```
+This will give us 10 different routes between Bergen St and Wall St. 
 
 Edit the database settings, increase the following by a reasonable amount:<br>
 server.memory.heap.initial_size
