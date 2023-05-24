@@ -3,6 +3,10 @@ A graph database setup for neo4j, to find routes between stops on a public trans
 The model is built from GTFS data, translated into a graph model to efficiently find paths between stops on the network.<br>
 This specific setup uses GTFS data from New York Citys public transit network.
 
+As mentioned previously, neo4j was chosen for this task due to needing a graph database. By structuring the data in a graph, we can utilize algorithms for pathfinding,<br>
+such as Dijkstra's shortest path algorithm or A*. Additionally, it allows us to easily structure things such as the stops, that might have parent stops, and sequences of StopTimes that create a whole trip.
+
+
 Edit the database settings, increase the following by a reasonable amount:<br>
 server.memory.heap.initial_size
 server.memory.heap.max_size
