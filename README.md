@@ -18,7 +18,8 @@ WHERE NONE (x IN RELATIONSHIPS(p) WHERE type(x)="OPERATES")
 RETURN p  
 LIMIT 10  
 ```
-This will give us 10 different routes between Bergen St and Wall St. 
+This will give us 10 different routes between Bergen St and Wall St.
+![query example](query_example.png)
 
 Edit the database settings, increase the following by a reasonable amount:<br>
 server.memory.heap.initial_size
