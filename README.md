@@ -8,6 +8,7 @@ such as Dijkstra's shortest path algorithm or A*. Additionally, it allows us to 
 
 ![meta graph](meta_graph.png)
 
+This meta graph shows the different relations between the nodes.
 
 Edit the database settings, increase the following by a reasonable amount:<br>
 server.memory.heap.initial_size
