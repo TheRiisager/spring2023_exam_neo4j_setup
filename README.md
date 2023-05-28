@@ -26,4 +26,4 @@ server.memory.heap.initial_size<br>
 server.memory.heap.max_size
 
 ## How to run
-run the commands in the files in order, starting with constraints, then subways, then the rest in any order.
+Create a database from the provided dump file (neo4j.dump)
