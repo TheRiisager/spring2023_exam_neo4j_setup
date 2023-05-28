@@ -38,3 +38,10 @@ CAll {
     WHERE s2.stop_sequence=s1.stop_sequence+1  
     CREATE (s1)-[:PRECEDES]->(s2) 
 } IN TRANSACTIONS
+
+:auto
+match (s:Stop)<-[r:LOCATED_AT]-(t:StopTime)
+call {
+    with s,t
+    set t += properties(s)
+} in transactions
